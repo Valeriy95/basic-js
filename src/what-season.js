@@ -11,7 +11,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * getSeason(new Date(2020, 02, 31)) => 'spring'
  * 
  */
+
 function getSeason(date) {
+
 
   if (!(date instanceof Date) || date[Symbol.toStringTag] === 'Date' || date.getTime() === isNaN) {
     throw new Error('Invalid date!'); 
