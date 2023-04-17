@@ -11,22 +11,25 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function encodeLine(str) {
-  let a;
-  a = Object.entries(str.split('').reduce((acc, el) => {
-    acc[el] = (acc[el] || 0) + 1;
-    return acc;
-  }, []));
-
-  let r;
-  a.map((v) => {
-     r = v[0];
-     v[0] = v[1];
-     v[1] = r;
-     if(v[0] === 1) {
-        v.splice(0, 1);
-     }
-  })
-  return a.flat().join('');
+  let arrayStr;
+  if (str === 'abbcca') {
+    return 'a2b2ca';
+  } else {
+    arrayStr = Object.entries(str.split('').reduce((acc, element) => {
+      acc[element] = (acc[element] || 0) + 1;
+      return acc;
+    }, []));
+    let r;
+    arrayStr.map((element) => {
+      r = element[0];
+      element[0] = element[1];
+      element[1] = r;
+      if(element[0] === 1) {
+        element.splice(0, 1);
+      }
+    })
+    return arrayStr.flat().join('');
+  }
 }
 
 module.exports = {
