@@ -19,8 +19,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  * reverseMachine.decrypt('AEIHQX SX DLLU!', 'alphonse') => '!NWAD TA KCATTA'
  * 
  */
-throw new NotImplementedError('Not implemented');
+// throw new NotImplementedError('Not implemented');
 class VigenereCipheringMachine {
+  // throw new NotImplementedError('Not implemented');
   
    // constructor(value) { 
   //   this.value = value;
